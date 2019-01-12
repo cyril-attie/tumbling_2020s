@@ -1,12 +1,10 @@
 $mycolor: rgb(255, 187, 51);
 
-
-header>nav.navbar {
+nav.navbar {
   background-color:$mycolor;
   font-size:20px;
   padding: 0px;
   margin : 0px;
-  margin-bottom:600px;
   border-bottom:3px black solid;
   align-items:start;
   a[class="navbar-brand"] {
@@ -14,55 +12,56 @@ header>nav.navbar {
     margin:0px;
     width:283px;
     #logo {
-      overflow:auto;
       width:100%;
       border : 5px #be2540 solid;
       
     }
   }
-  
-  div#navbarDropdown {
-    vertical-align:bottom;
-    margin-bottom:0;
-    
-    ul.navbar-nav {
-      width:100%;
-      text-align: center;
-      color:rgba(0,0,0,1);
+} 
+
+div {
+  border-top:3px black solid;
+  vertical-align:bottom;
+  margin-bottom:0;
+  height:100%;
+  ul.navbar-nav {
+    width:100%;
+    text-align: center;
+    color:rgba(0,0,0,1);
+    height:100%;
+    li.nav-item {
+      padding:0px 0px 0px 0px;
+      justify-content: center;
       
-      li.nav-item {
-        // width: 150px;
-        // min-width: 140px;
-        padding:0px 0px 0px 0px;
-        justify-content: center;
-        :hover {
-          background-color: #c35065;
-        }
-        a.nav-link {
-          // border-radius: 0.25rem;
-          // border-bottom: 2px black solid;
-          
-          width:100%;
-          padding:0px;
-          margin: 0;
-          color:rgba(0,0,0,1);
-          
-        }
-        .nav-link:hover, .nav-link:visited {
-          font-weight: bold;
-          vertical-align:middle;
-        }
-        .nav-link:active {
-          font-weight: bold;
-          color : red;
-        }
+      :hover {
+        background-color: #c35065;
       }
-      .active {
+
+      a.nav-link {       
+        width:100%;
+        padding:0px;
+        margin: 0;
+        color:rgba(0,0,0,1);                
+      }
+
+      .nav-link:hover, .nav-link:visited {
         font-weight: bold;
+        vertical-align:middle;
       }
+
+      .nav-link:active {
+        font-weight: bold;
+        color : red;
+      }
+    }
+
+    .active {
+      font-weight: bold;
     }
   }
 }
+
+
 
 
 p {
@@ -78,70 +77,107 @@ p {
   height: 100px;
 }
 
-@media (max-width: 576px) {
-  header>nav.navbar[role="navigation"] {
-    justify-content: center;
-    height:auto;
-    a {
-      width:100%;
-      max-width:265px;
-      margin:0;
-      >img#logo {
-        width: 100%;
-        border-radius: 10px;
-      }
-    }
-    #toggler {
-      width:100%;
-      border:5px rgba(0,0,0,0.6) solid;
-      background-color:#be2540;
-      border-radius:0.5rem;
-      max-width: 175px;
-      height: 48px;
-      margin:5px 63.2px;
+footer {
+  
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
 
-    }
-    div#navbarDropdown {
-      max-width: 100%;
-        ul.navbar-nav>li.nav-item>a.nav-link {
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+}
+@media (max-width: 576px) {
+  //for phones
+  header {
+    margin-bottom:20px;
+
+    >nav.navbar[role="navigation"] {
+      justify-content: center;
+      height:auto;
+      
+      >a {
         width:100%;
-        margin:auto;
-        
+        max-width:265px;
+        margin:0;
+
+        >img#logo {
+          width: 100%;
+          border-radius: 10px;
+          overflow:auto;
+        }
+      }
+      #toggler {
+        width:100%;
+        border:5px rgba(0,0,0,0.6) solid;
+        background-color:#be2540;
+        border-radius:0.5rem;
+        max-width: 175px;
+        height: 48px;
+        margin:5px 63.2px;
+
+      }
+      div {
+        max-width: 100%;
+
+          ul.navbar-nav>li.nav-item>a.nav-link {
+          width:100%;
+          margin:auto;
+          
+        }
       }
     }
   }
 }
 
 @media (min-width: 576px) {
-  nav {
-    height:100px;
-    >a{
-      min-width:283px;
+  
+  header {  
+    margin-bottom:100px;
+    nav {
+      height:80px;
+      >a{
+        min-width:283px;
+      }
+    }
+    #logo {
+      border-radius: 12.5px;
+      border-top-left-radius:0px;
+      border-top-right-radius:0px;
+      overflow:visible;
+    }
+    div>ul.navbar-nav>li.nav-item>a.nav-link{
+      line-height: 37px;
+      height :100%;
+      min-width:130px; 
     }
   }
-  #logo {
-    border-radius: 12.5px;
-    border-top-left-radius:0px;
-    border-top-right-radius:0px;
-    overflow:visible;
-  }
-  div{    
-    height:100%;
-    >ul.navbar-nav {
-      height:100%;      
-      >li.nav-item {        
-        >a.nav-link{
-          line-height: 50px;
-          height :100%;
-          min-width:130px;            
-        }  
-      }  
-    } 
+  footer {
+    div>nav{
+      height:60px;
+      a {
+        line-height:57px;
+      }
+    }
+
   }
 }
 
 @media (min-width: 813px) {
-  div>ul.navbar-nav>li.nav-item>a.nav-link{
-          line-height: 100px;
+
+  #logo{width:800px}
+
+  div.site-navigation>ul.navbar-nav>li.nav-item>a.nav-link{
+          line-height: 74px;
   }
 }
