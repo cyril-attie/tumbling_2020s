@@ -1,0 +1,97 @@
+$mycolor: rgb(255, 187, 51);
+$mycolor2: #c35065; 
+
+html, body {
+  background-color:$mycolor;
+  height:100%;
+}
+
+#landing{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  align-content:space-around;
+  
+  #logo{
+    flex-grow:10;
+    img {
+      border-radius:10px;
+      border:2px $mycolor2 solid;
+    }
+  }
+
+  #mission {
+    flex-grow: 6;
+   
+    text-align:justify;
+    
+  }
+
+  #footer-disclaimer {
+    background-color: $mycolor2;
+    font-size: 10px;
+    color: black;
+    padding:10px;
+    text-align:justify;
+    margin-top:auto;
+    margin-bottom:0;
+    width:100%;
+    flex-grow:1;
+}
+
+}
+a, img{  
+  width:100%;
+  max-width:450px;
+  }
+
+
+
+#footer-disclaimer {
+    background-color: $mycolor2;
+    font-size: 10px;
+    color: black;
+    padding:10px;
+    text-align:justify;
+    margin-top:auto;
+    margin-bottom:0;
+    width:100%;
+}
+
+@media (max-width:450px){
+  #logo{
+    padding:3.5%;
+  }
+  #mission{
+    padding:6%;
+    font-size:1.4em;
+  }
+}
+
+@media (min-width:450px){
+  #mission{
+    padding:20px 20px;
+    font-size:2em;
+  }
+  
+  #logo{
+    padding:3.5%;
+    margin-top:2%;
+    display: flex;
+    min-height: 300px;
+    align-items: center;
+    img{display:block}
+  }
+}
+
+@media (min-width:800px) {
+  a,img {  
+    width:100%;
+    max-width:500px;
+    margin-top:5%;
+  }
+  #mission {
+    padding:7%;
+  }
+}
