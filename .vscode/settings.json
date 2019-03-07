@@ -1,0 +1,6 @@
+{
+  "editor.wordWrap": "wordWrapColumn",
+  "files.autoSave": "onFocusChange",
+  "editor.wordWrapColumn": 150,
+  "python.linting.pylintEnabled": true
+}
