@@ -45,6 +45,15 @@ div.site-navigation {
     div.site-navigation ul.navbar-nav .active {
       font-weight: bold; }
 
+#central-text {
+  margin-top: 52px;
+  max-width: 740px;
+  font-family: Georgia, Cambria, "Times New Roman", Times,serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.58;
+  letter-spacing: -.003em; }
+
 p {
   text-align: justify; }
 
