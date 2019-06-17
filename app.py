@@ -2,10 +2,14 @@
 import os
 
 from flask import Flask, render_template, request
+from flask_sslify import SSLify
 # from sqlalchemy import create_engine
 # from sqlalchemy.orm import scoped_session, sessionmaker
 
+
 app = Flask(__name__)
+sslify = SSLify(app)
+
 
 # engine = create_engine(os.getenv("DATABASE_URL"))
 # db = scoped_session(sessionmaker(bind=engine))
