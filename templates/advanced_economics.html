@@ -444,31 +444,39 @@
       tumble will be more difficult to conceal than previous ones.</strong> Why?
 
   </p>
-  <!-- TradingView Widget BEGIN -->
-  <div class="tradingview-widget-container">
-    <div id="tradingview_ff494"></div>
-    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/TVC-NDX/" rel="noopener"
-        target="_blank"><span class="blue-text">NDX Chart</span></a> by TradingView</div>
-    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-    <script type="text/javascript">
-      new TradingView.widget(
-        {
-          "autosize": true,
-          "symbol": "TVC:NDX",
-          "timezone": "Etc/UTC",
-          "theme": "Light",
-          "style": "2",
-          "locale": "en",
-          "toolbar_bg": "#f1f3f6",
-          "enable_publishing": false,
-          "range": "60m",
-          "hide_side_toolbar": false,
-          "container_id": "tradingview_ff494"
-        }
-      );
-    </script>
-  </div>
-  <!-- TradingView Widget END -->
+ <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="watchlist"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "container_id": "watchlist",
+  "width": 998,
+  "height": 610,
+  "symbol": "NASDAQ:AAPL",
+  "interval": "D",
+  "timezone": "exchange",
+  "theme": "Light",
+  "style": "1",
+  "toolbar_bg": "#f1f3f6",
+  "withdateranges": true,
+  "allow_symbol_change": true,
+  "save_image": false,
+  "watchlist": [
+    "SPX",
+    "NKY",
+    "000001",
+    "DAX",
+    "CAC40"
+  ],
+  "locale": "en"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
   <h2 id="forecasting-war">Trump Saving the System by Priming The Masses About War</h2>
   <p>
