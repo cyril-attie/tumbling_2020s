@@ -58,6 +58,8 @@ div.site-navigation {
   #central-text .responsive-img {
     max-width: 100%;
     height: auto; }
+  #central-text figcaption {
+    font-size: 0.25em; }
 
 p {
   text-align: justify; }
