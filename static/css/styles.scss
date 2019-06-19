@@ -115,7 +115,10 @@ footer {
     margin-bottom:0.2em;
   }
 
-  
+  .responsive-img {
+    max-width:100%;
+    height:auto;
+  }
 
   .fa-github {
     color:black;
