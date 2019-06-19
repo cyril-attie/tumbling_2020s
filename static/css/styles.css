@@ -55,6 +55,9 @@ div.site-navigation {
   letter-spacing: -.003em; }
   #central-text div {
     margin-bottom: 1rem; }
+  #central-text .responsive-img {
+    max-width: 100%;
+    height: auto; }
 
 p {
   text-align: justify; }
@@ -80,9 +83,6 @@ footer #social-media-title {
   font-size: 24px;
   min-width: 50%;
   margin-bottom: 0.2em; }
-footer .responsive-img {
-  max-width: 100%;
-  height: auto; }
 footer .fa-github {
   color: black; }
   footer .fa-github:before {

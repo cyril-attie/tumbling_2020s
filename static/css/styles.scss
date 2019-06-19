@@ -80,6 +80,10 @@ div.site-navigation {
   div{
     margin-bottom:1rem;
   }
+  .responsive-img {
+    max-width:100%;
+    height:auto;
+  }
 }
 
 p {
@@ -115,10 +119,8 @@ footer {
     margin-bottom:0.2em;
   }
 
-  .responsive-img {
-    max-width:100%;
-    height:auto;
-  }
+
+
 
   .fa-github {
     color:black;
