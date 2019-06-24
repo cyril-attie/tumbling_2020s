@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<!-- {%- for category, message in get_flashed_messages(with_categories = true) %}
+<div class = "alert alert-danger">
+   {{ message }}
+</div>
+{%- endfor %} -->
+<form action="{{ url_for('logged_in') }}" method="post">
+  <label for="first-name">First name</label><br>
+  <input type="text" name="first-name" placeholder="ex: Satoshi" /><br>
+  <label for="last-name">Last name</label><br>
+  <input type="text" name="last-name" placeholder="ex: Nakamoto" /><br>
+  <label for="email">Email</label><br>
+  <input type="text" name="email" placeholder="ex: satoshi@nakamoto.org" /><br>
+  <label for="username">Username</label><br>
+  <input type="text" name="username" placeholder="ex: satoshi99"/><br>
+  <label for="password1">Password</label><br>
+  <input type="password" name="password1" placeholder="Type your password" /><br>
+  <label for="password2">Password</label><br>
+  <input type="password" name="password2" placeholder="Confirm your password" /><br>
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

@@ -1,5 +1,5 @@
 # home/murichun/web/CS50/bin/python3.7
-import os,config
+import os, config
 from flask import Flask, render_template, request
 from flask_sslify import SSLify
 from models import *
