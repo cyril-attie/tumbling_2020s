@@ -1,19 +1,17 @@
 # home/murichun/web/CS50/bin/python3.7
-import os
-
+import os,config
 from flask import Flask, render_template, request
 from flask_sslify import SSLify
-# from sqlalchemy import create_engine
-# from sqlalchemy.orm import scoped_session, sessionmaker
+from models import *
+# from OpenSSL import SSL
+# context = SSL.Context(SSL.SSLv23_METHOD)
 
 
 app = Flask(__name__)
-sslify = SSLify(app)
+#sslify = SSLify(app)
+app.config.from_object(config.DevelopmentConfig)
 
-
-# engine = create_engine(os.getenv("DATABASE_URL"))
-# db = scoped_session(sessionmaker(bind=engine))
-
+db.init_app(app)
 
 @app.route("/")
 def index():
@@ -42,8 +40,19 @@ def advanced():
 def about():
     return render_template("about.html")
 
+@app.route("/sign_up")
+def sign_up():
+    return render_template("sign_up.html")
+
+
+@app.route("/user_page", methods=["POST", "GET"])
+def logged_in():
+    return render_template("user_page.html")
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(debug=True, host='0.0.0.0', port=port)
-    app.run(debug=True)
+    # context=('host.cert','host.key')
+    app.run(debug=True, host='0.0.0.0', port=port)#, ssl_context=context)
+    
+
