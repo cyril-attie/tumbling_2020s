@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section id="central-text" class="container">
+
+  <h1>
+    What Blockchain means to an economist and programmer. 
+  </h1>
+  <div id="abstract-index">
+    <p id="abstract-text">
+      This paper regards the blockchain structure and events that have implications everywhere else, in the short and long term.
+
+      <ol>
+        <li><a href="#T20-model">The T20 Model</a></li>
+        <li><a href="#testing-T20-model">Testing the T20 Model</a>
+        <li><a href="#dot-com-crisis">The Dot-Com (.com) Crisis</a></li>
+        <li><a href="#transition-between-crises">The Transition Between Crises</a></li>
+        <li><a href="#great-recession">The Great Recession</a></li>
+        </li>
+        <li><a href="#bypassing-the-normal">Illegitimate Cheating to save the System</a></li>
+        <li><a href="#2020-crisis-forecast">The Tumbling 2020's Crisis Forecast</a> </li>
+        <li><a href="#forecasting-war">Trump Saving the System by Priming The Masses About War</a></li>
+        <li><a href="#serfdom-vs-freedom">Serfdom vs Freedom</a></li>
+        <li><a href="#monetary-reset">The Great Monetary Reset</a></li>
+      </ol>
+    </p>
+    <div id="other-levels">
+      <div class="d-md-inline-block p-md-2">
+        <p>Completely new to economics? </p>
+        <button><a href="{{ url_for('beginner')}}">Read Tumblien's Tale</a></button>
+      </div>
+      <div class="d-md-inline-block p-md-2">
+        <p>
+          Not familiar with economic slang?
+        </p> <button><a href="{{ url_for('intermediate')}}">Read The Tumbling 20's
+            Crisis page</a></button>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    Note from the author: if you are new to blockchain I recommend you to read first <a href="{{url_for('advanced', _anchor='blockchain-monetary-reset')}}">the final part of the Tumbling 20's paper</a>
+  </p>
+
+
+</section>
+{% endblock %}

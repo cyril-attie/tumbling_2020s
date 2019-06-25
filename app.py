@@ -40,14 +40,18 @@ def advanced():
 def about():
     return render_template("about.html")
 
-@app.route("/sign_up")
-def sign_up():
-    return render_template("sign_up.html")
+@app.route("/blockchain")
+def blockchain():
+    return render_template("blockchain.html")
+
+# @app.route("/sign_up")
+# def sign_up():
+#     return render_template("sign_up.html")
 
 
-@app.route("/user_page", methods=["POST", "GET"])
-def logged_in():
-    return render_template("user_page.html")
+# @app.route("/user_page", methods=["POST", "GET"])
+# def logged_in():
+#     return render_template("user_page.html")
 
 
 if __name__ == '__main__':
