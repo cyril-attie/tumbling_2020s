@@ -4,11 +4,13 @@
 <section id="central-text" class="container">
 
   <h1>
-    What Blockchain means to an economist and programmer. 
+    The Blockchain Revolution.
   </h1>
   <div id="abstract-index">
     <p id="abstract-text">
-      This paper regards the blockchain structure and events that have implications everywhere else, in the short and long term.
+      ABSTRACT: This paper regards the blockchain genesis and keystones. Besides, Bitcoin and Ethereum are presented.
+      Especially Ethereum as smart undergoing changes in the protocol are about to boost the overthrow of the banking
+      hegemony in favor of freedom.
 
       <ol>
         <li><a href="#T20-model">The T20 Model</a></li>
@@ -39,9 +41,87 @@
   </div>
 
   <p>
-    Note from the author: if you are new to blockchain I recommend you to read first <a href="{{url_for('advanced', _anchor='blockchain-monetary-reset')}}">the final part of the Tumbling 20's paper</a>
+    Note from the author: the first time you read this blockchain report, I recommend to read it entirely once as there
+    is a logical sequence of ideas that reveal evidence of forecasts. Please get in touch for any remark or comment. We
+    appreciate hearing from you!
+  </p>
+  <h2 id="blockchain-revolution-seed">Blockchain Revolution Seed</h2>
+  <p>
+    Thirty years ago, already a small group of people was preparing the current worldwide revolution. Timothy C. May,
+    one of the founders of the Cypherpunks email list, wrote in 1988 <q>"The technology for this revolution--and it
+      surely will be both a social and economic revolution--has existed in theory for the past decade. The methods are
+      based upon public-key encryption, zero-knowledge interactive proof systems, and various software protocols for
+      interaction, authentication, and verification"</q> (appeared in <a
+      href="https://nakamotoinstitute.org/crypto-anarchist-manifesto/">The Crypto Anarchist Manifesto</a>).
+    Indeed, in the late 1970's some proficient mathematicians made new discoveries in cryptography that opened the
+    door to
+    new ways of interaction: public-key encryption and hashing algorithms allowed <i data-toggle="tooltip"
+      title="Refers to systems without central authority, governance or middlepoint">decentralized peer-to-peer
+      systems</i>
+    (examples: 1978's paper <a href="https://nakamotoinstitute.org/literature/rsa-paper/">A Method for Obtaining
+      Digital Signatures and Public-key Cryptosystems</a> by R.L. Rivest, Adi Shamir and Leonard M. Adleman).
+  </p>
+  <p>
+    However, at that time Internet was still slow and only used for military and academic purposes and personal
+    computers were less than 10 years old. With the opening of Internet to the public in the 1994 personal computers
+    doubled processing power and memory every 10 years. So the Cypherpunks and other fellow founders of blockchain had
+    to wait till 2008 to actually succeed. Other blockchains had appeared before 2008: Hal Finney's <a
+      href="https://nakamotoinstitute.org/finney/rpow/index.html">RPOW</a> (Reusable Proof Of Work) from 2004 was
+    a blockchain akin to how bitcoin protocol works. That implementation didn't take off, blockchain founders learned
+    some lessons from that failure.
   </p>
 
+  <p>
+    The early blokchain community kept discussing and engineering more secure algorithms on internet forums. Nearly
+    fourty years after the first presentation of public-key cryptography <a href="http://historyofbitcoin.org/">Bitcoin
+      apppeared</a>. Bitcoin is the first blockchain that suceeded. It was in 2008: in August bitcoin.org was registered
+    and on October 31rst the <a href="https://nakamotoinstitute.org/static/docs/bitcoin.pdf">White Paper</a> appeared
+    describing the project. All this was done anonynously and the code was uploaded to collaborative open source
+    platforms, first to sourceforge.net and then to github.com, and developed 100% collaboratively.
+  </p>
+  <p>
+    Blockchains work based on 2 pieces of software: a node software and a client software. The node software is the
+    bulk of the system code: nodes are the equivalent to a server. Nodes computers compute client requests and update
+    their stored blockchain with new blocks having been found. Blockchain holds its name because the memory of the
+    system is organized in blocks chronologically "chained" by a link to the previous block hash and a timestamp.
+    On the other side client softwares are able to sign transactions using public cryptography.
+    <!-- I explain hashes and public cryptography below. -->
+  </p>
+  <p>
+    The cryptography is the art of encoding or ciphering messages. Nowadays most applications use private cryptography.
+    Under private cryptography the server and the client store a private key that both encodes and decodes the messages
+    to be sent. Messages can be your username and password, photos, comments, videos, or any piece of data sent through
+    the internet. Private keys are securely stored in your browser and in the server. However, as server contain the
+    secret keys of all clients, they are a honey pot for crackers (crackers are criminal hackers). Once in a while
+    servers get corrupted by some cracker and private keys get stolen allowing the criminal to supplant the identity of
+    clients to send himself money from client accounts or whatever else he intends to do.
+  </p>
+  <p>
+    Instead Public-key cryptography is based on <strong>2 keys: a public key and a private key</strong>.
+    The public key ciphers data that only the private key can decipher. The public key is the equivalent to the bank
+    account number and the private key is the equivalent to the account's owner signature: on blockchain, to send units of
+    value, one deciphers units that were previously ciphered with his public key and ciphers them with the recipient's public
+    key so that the recipient, and only the recipient, can decipher the and encrypt them with another's account public key.
+  </p>
+  <table>
+    <thead>
+      <th>Operation</th>
+      <th>Economically</th>
+      <th>Cryptographically</th>
+    </thead>
+    <tr>
+      <td>Send money, Buy something or pay the bill</td>
+      <td>You authorize the transfer of units of the blockchain from your account to another's account</td>
+      <td>Your client (phone, computer, credit card or any support for your private key) signs the transaction by
+        decrypting previously received (refer to receive operation) units and encrypts these units with the destination
+        account public key</td>
+    </tr>
+    <tr>
+      <td>Receive</td>
+      <td>Your salary, a transfer, a revenue or any other incoming money arrives to your account</td>
+      <td>Somebody else has decrypted his units and has encrypted them with your account public key</td>
+    </tr>
+  </table>
 
 </section>
 {% endblock %}

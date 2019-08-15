@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section id="central-text" class="container">
+
+  <h1>
+    The Blockchain Revolution.
+  </h1>
+  <div id="abstract-index">
+    <p id="abstract-text">
+      ABSTRACT: Blockchain is steadily taking over finance and the government. In the next year, important events are
+      coming that will determine the real power behind blockchain. Check our safe investment strategy regarding
+      cryptocurrencies and get in touch for conferences and investment partnership.
+
+      <ol>
+        <li><a href="#blockchain-introduction">Blockchain Introduction</a>
+          <ol>
+            <li id="#blockchain-revolution-seed">Blockchain Revolution Seed</li>
+            <li id="#blockchain-collaborative-structure">Blockchain Collaborative Structure</li>
+            <li id="#public-cryptography-and-hashing">Public Cryptography and Hashing</li>
+          </ol>
+        </li>
+        <li><a href="#blockchain-solutions">Blockchain solutions</a>
+        <li><a href="#dot-com-crisis">The Dot-Com (.com) Crisis</a></li>
+        <li><a href="#transition-between-crises">The Transition Between Crises</a></li>
+        
+      </ol>
+    </p>
+    <div id="other-levels">
+      <div class="d-md-inline-block p-md-3">
+        <p>Completely new to economics? </p>
+        <button><a href="{{ url_for('beginner')}}">Read Tumblien's Tale</a></button>
+      </div>
+      <div class="d-md-inline-block p-md-3">
+        <p>
+          Not familiar with economic cycle?
+        </p> <button><a href="{{ url_for('intermediate')}}">Read The Tumbling 20's
+            Crisis page</a></button>
+      </div>
+      <div class="d-md-inline-block p-md-3">
+        <p>
+          Not familiar with economic cycle?
+        </p> <button><a href="{{ url_for('blockchain')}}">Read The Tumbling 20's
+            Paper</a></button>
+      </div>
+    </div>
+  </div>
+  <h1 id="blockchain-introduction">Blockchain Introduction</h1>
+  <p>
+    Already 30 years ago blockchain founders were already working towards a more open society with less governance. The
+    blossoming blockchain industry is the seedling of their effort to remove surveiling centralized registries and
+    intermediaries, like banks, and today this transition is happenning faster than we feel.
+  </p>
+
+  <h2 id="blockchain-revolution-seed">Blockchain Revolution Seed</h2>
+
+  <p>
+    However, in the 1970/80's Internet was still slow and only used for military and academic purposes and personal
+    computers were less than 10 years old. With the opening of Internet to the public in 1994, personal computers
+    doubled processing power and memory every 10 years. So the Cypherpunks and other fellow founders of blockchain had
+    to wait till 2008 to actually succeed. Other blockchains had appeared before 2008: Hal Finney's <a
+      href="https://nakamotoinstitute.org/finney/rpow/index.html">RPOW</a> (Reusable Proof Of Work) from 2004 was
+    a blockchain akin to how bitcoin protocol works. But that implementation didn't take off, and similar to esperanto
+    RPOW, vanished. Blockchain founders learned some lessons from that failure.
+  </p>
+
+  <p>
+    The early blokchain community kept discussing and engineering more secure algorithms on internet forums. Nearly
+    fourty years after the first presentation of public-key cryptography <a href="http://historyofbitcoin.org/">Bitcoin
+      apppeared</a>. Bitcoin is the first blockchain that suceeded. It was in 2008: in August bitcoin.org was registered
+    and on October 31rst the <a href="https://nakamotoinstitute.org/static/docs/bitcoin.pdf">White Paper</a> appeared
+    describing the project. All this was done anonynously and the code was uploaded to collaborative open source
+    platforms, first to sourceforge.net and then to github.com, and collaboratively developed 100% open source.
+  </p>
+
+  <h2 id="blockchain-collaborative-structure">Blockchain Collaborative Structure</h2>
+
+  <p>
+    Blockchain works based on 2 pieces of software: a node software and a client software. The node software is the
+    bulk of the system code: nodes are the equivalent to any application server. Node computers compete to create the
+    next block
+    containing client requests (e.g. transactions) and update their stored blockchain with the new block having been
+    found by other nodes. Blockchain holds its name because the memory of the system is organized in linked blocks.
+    Every block
+    is computed using the previous block <strong>hash</strong> so blocks are chronologically chained. On the other side
+    client softwares are able to sign transactions using <strong>public cryptography</strong>. I explain hashes and
+    public cryptography below.
+  </p>
+
+
+  <h2 id="pk-cryptography-and-hashing">Public Cryptography and Hashing</h2>
+
+  <p>
+    Firstly <strong>cryptography is the art of encoding or ciphering messages</strong>. Nowadays most applications use
+    private cryptography to secure communications. Under private cryptography the server and the client store a secret
+    key that is useful to encode and decode the messages to be sent. Messages can be your user credentials to access a
+    web application, uploaded photos, posted comments, streamed videos, or any piece of data sent through the internet.
+    Private keys are securely stored in your browser and in the server. However, as servers contain the secret keys of
+    all clients, they are a honey pot for crackers (crackers are criminal hackers). Once in a while a cracker gets to
+    corrupt a server and gets to steal private keys. Then he can supplant the identity of clients to send to himself
+    money from client accounts or whatever else he intends to do. Private cryptography was already known at the times of
+    the Romans.
+  </p>
+  <p>
+    Instead Public-key cryptography is based on a <strong>key-pair: a public key and a secret key</strong>. The public
+    key is created with the secret key. The public key ciphers data that only the corresponding secret key can decipher.
+    The public key is the equivalent to the bank account number and the private key is the equivalent to the account's
+    owner signature. On blockchain, to send units of value, one deciphers units that were previously ciphered with his
+    public
+    key (ergo signs the transaction) and ciphers them with the recipient's public key so that the recipient, and only
+    the recipient, can decipher the unspent transactions and send them to another account encrypting them the account's
+    public key.
+  </p>
+  <table>
+    <thead>
+      <th>Operation</th>
+      <th>Economically</th>
+      <th>Cryptographically</th>
+    </thead>
+    <tr>
+      <td>Send money, buy something or pay the bill</td>
+      <td>You authorize the transfer of units of the blockchain from your account to another's account</td>
+      <td>Your client software (on phone, computer, credit card or any wallet support) signs the transaction by
+        deciphering previously received and unspent units and encrypts these units with the
+        destination account public key</td>
+    </tr>
+    <tr>
+      <td>Receive</td>
+      <td>Your salary, a transfer, a revenue or any other incoming money arrives to your account</td>
+      <td>Somebody else has decrypted unspent units that were sent to his/her account and has encrypted them with your
+        account
+        public key</td>
+    </tr>
+  </table>
+  <p>
+    So public-key cryptography allows to sign transactions.
+  </p>
+  <p>
+    Secondly, hash functions map an input of arbitrary size to a fixed size output. The inputed data can be a video, a
+    piece of software or, in blockchain, a transaction. The properties of cryptographic hash functions is that they are
+    one-way functions. We can easily hash any data but it is computationally infeasible to reverse back the data
+    from the hash. This is useful for authenticity verfication. Actually software developers are used to provide
+    customers with the software hash to verify the downloaded software is truly the one the software provided wrote and
+    not some malicious software.
+  </p>
+  <p>
+    Hash functions are used to store efficiently transactions: instead of storing all the transactions, some lightweight
+    clients can store only the transaction hashes. In blockchain every block is computed using the previous block
+    <strong>hash</strong> and a timestamp so blocks are chronologically chained. The hash of each block is computed
+    using the hash of the previous block, so hashing is used for chronologically chaining blocks in a blokcchain
+    resulting in a
+    clear cut on which transaction happened before.
+  </p>
+  <p>
+    To sum up blobkchain is born in the attempt to replace governance, centralized systems and intermediaries. In order
+    to remove governance, blockchain is leveraging the Internet infrastructure and cryptographic discoveries from
+    1970's, like public-key cryptography and hash functions to sign and verify transactions. We shall now turn to some 
+    determining advances that are chief to understand the Tumbling 20s strategy. 
+  </p>
+<h1 id="blockchain-solutions">Blockchain solutions</h1>
+</section>
+{% endblock %}
